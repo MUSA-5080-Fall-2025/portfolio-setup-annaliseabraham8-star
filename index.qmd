@@ -15,8 +15,8 @@ Advanced spatial analysis and data science for urban planning and public policy.
 - **Final Project:** Capstone modeling challenge
 
 ## About Me
-[Students will customize this section]
+I'm a second year Master of City Planning student at the Weitzman School of Design. I'm taking this course to strengthen my data and modeling skills. 
 
 ## Contact
-- Email: [your.email@upenn.edu]
-- GitHub: [@your-username]
+- Email: [ama88@upenn.edu]
+- GitHub: [@annaliseabraham8-star]
