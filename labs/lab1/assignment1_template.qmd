@@ -446,9 +446,9 @@ county_summary %>%
     caption = "County Reliability and Algorithmic Recommendations"
   )
 
-**Key Recommendations:**
+**Key Recommendations**
 
-**Your Task:** Use your analysis results to provide specific guidance to the department.
+**Your Task** Use your analysis results to provide specific guidance to the department.
 
 1. **Counties suitable for immediate algorithmic implementation:** [Counties with high confidence data are appropriate because they have low margins of error.]
 
