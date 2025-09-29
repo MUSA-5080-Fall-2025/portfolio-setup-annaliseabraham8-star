@@ -1,0 +1,4 @@
+"0","census_api_key(Sys.getenv(""7f3237778c134da68ede6b2dc985410b3788e258""))
+"
+"2","To install your API key for use in future sessions, run this function with `install = TRUE`.
+"
