@@ -119,7 +119,7 @@ pa_data <- pa_data %>%
 - Create a flag for unreliable estimates (MOE > 10%)
 
 **Hint:** Use `mutate()` with `case_when()` for the categories.
-
+```{r}
 paa_data_alt <- pa_data %>%
   mutate(
     moe_pct = (median_incomeM / median_incomeE) * 100,
@@ -131,7 +131,6 @@ paa_data_alt <- pa_data %>%
     unreliable_flag = moe_pct > 10
   )
 
-```{r check-objects}
 ls()
 
 # Calculate MOE percentage and reliability categories using mutate()
@@ -148,7 +147,7 @@ reliability_summary <- paa_data_alt %>%
   )
   
 ls()
-  
+```  
 ## 2.3 High Uncertainty Counties
 
 "**Your Task:** Identify the 5 counties with the highest MOE percentages."
@@ -161,7 +160,7 @@ ls()
 
 **Hint:** Use `arrange()`, `slice()`, and `select()` functions.
 
-```{r high-uncertainty}"
+```{r high-uncertainty}
 
 
 # Create table of top 5 counties by MOE percentage
@@ -186,8 +185,8 @@ kable(
   digits = 1,
   format.args = list(big.mark = ",")
 )
-
-"**Data Quality Commentary:**
+```
+**Data Quality Commentary:**
 
 [Write 2-3 sentences explaining what these results mean for algorithmic decision-making. Consider: Which counties might be poorly served by algorithms that rely on this income data? What factors might contribute to higher uncertainty? - Counties with lower confidence levels have less reliable data. A large range in the median income values or a small sample size could lead to higher levels of uncertainty.]"
 
@@ -206,7 +205,7 @@ kable(
 # Display the selected counties with their key characteristics
 # Show: county name, median income, MOE percentage, reliability category
 
-
+```{r}
 selected_counties <- paa_data_alt %>%
   filter(NAME %in% c("Forest", 
                      "Allegheny")) %>%
@@ -218,8 +217,8 @@ selected_counties <- paa_data_alt %>%
   )
 
 selected_counties                   
-
-"**Comment on the output:** [Allegheny County has a median income of $72537 and a margin of error of 1.2% while Forest County has a median income of $46188 and a margin of error of 10%.]
+```
+**Comment on the output:** [Allegheny County has a median income of $72537 and a margin of error of 1.2% while Forest County has a median income of $46188 and a margin of error of 10%.]
 
 ## 3.2 Tract-Level Demographics
 
@@ -232,7 +231,7 @@ selected_counties
 - Output format: wide
 - **Challenge:** You'll need county codes, not names. Look at the GEOID patterns in your county data for hints."
 
-{r tract-demographics}
+```{r tract-demographics}
 # Define your race/ethnicity variables with descriptive names
 
 # Use get_acs() to retrieve tract-level data
@@ -242,7 +241,7 @@ selected_counties
 # Create percentages for white, Black, and Hispanic populations
 
 # Add readable tract and county name columns using str_extract() or similar
-```
+
 
 library(stringr)
 
@@ -275,7 +274,7 @@ tract_demographics <- get_acs(
     county_fips = str_sub(GEOID, 3, 5),
     tract_code = str_sub(GEOID, 6, 11)
   )
-
+```
 ## 3.3 Demographic Analysis
 
 **Your Task:** Analyze the demographic patterns in your selected areas.
@@ -303,10 +302,10 @@ county_summary <- tract_demographics %>%
   ungroup()
 
 # Create a nicely formatted table of your results using kable()
-```
+
 county_summary %>%
   kable(digits = 1, caption = "Average Demographics by County (ACS 2022 5-year)")
-
+```
 # Part 4: Comprehensive Data Quality Evaluation
 
 ## 4.1 MOE Analysis for Demographic Variables
@@ -326,7 +325,7 @@ county_summary %>%
 # Use logical operators (| for OR) in an ifelse() statement
 
 # Create summary statistics showing how many tracts have data quality issues
-```
+
 demographic_moe <- tract_demographics %>%
   # 1. Calculate MOE percentages
   mutate(
@@ -356,7 +355,7 @@ moe_summary <- demographic_moe %>%
     avg_moe_black = mean(moe_black, na.rm = TRUE),
     avg_moe_hispanic = mean(moe_hispanic, na.rm = TRUE)
   )
-
+```
 ## 4.2 Pattern Analysis
 
 "**Your Task:** Investigate whether data quality problems are randomly distributed or concentrated in certain types of communities."
@@ -388,7 +387,7 @@ pattern_analysis %>%
     digits = 1,
     caption = "Comparison of Tracts by Data Quality (High MOE vs. Reliable)"
   )
-
+```
 "**Pattern Analysis:** [Describe any patterns you observe. Do certain types of communities have less reliable data? What might explain this? All the census tracts I looked at had MOE issues. The Black and Latino population data did have higher MOEs in general, perhaps because they had a smaller sample size. - Would appreciate feedback on this!]"
 
 
@@ -428,9 +427,9 @@ To address these challenges, the Department should adopt a multi-layered strateg
 # - Low Confidence: "Requires manual review or additional data"
 
 # Format as a professional table with kable()"
-```
 
-county_summary <- pa_data_alt %>%
+
+county_summary <- paa_data_alt %>%
   select(
     County = NAME,
     `Median Income` = median_incomeE,
@@ -452,8 +451,8 @@ county_summary %>%
     digits = 1,
     caption = "County Reliability and Algorithmic Recommendations"
   )
-
-"**Key Recommendations**
+```
+**Key Recommendations**
 
 **Your Task** Use your analysis results to provide specific guidance to the department.
 
@@ -501,3 +500,4 @@ Before submitting your portfolio link on Canvas:
 - [ ] Document renders correctly to HTML
 
 **Remember:** Submit your portfolio URL on Canvas, not the file itself. Your assignment should be accessible at `your-portfolio-url/assignments/assignment_1/your_file_name.html`"
+

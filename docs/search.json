@@ -1,0 +1,268 @@
+[
+  {
+    "objectID": "weekly-notes/week-01-notes.html",
+    "href": "weekly-notes/week-01-notes.html",
+    "title": "Week 1 Notes - Course Introduction",
+    "section": "",
+    "text": "• Tidyverse presents data as ‘tibbles’ – presents better\nit Uses data_\nR presents data as data frames\nUses data.\nSelect1 &lt;- select(car_data, column1, column2….)\nMutate(car_data, price_k = Price / 1000)\nFilter(car_data, Price &gt; 2000)\nRename – to rename columns"
+  },
+  {
+    "objectID": "weekly-notes/week-01-notes.html#key-concepts-learned",
+    "href": "weekly-notes/week-01-notes.html#key-concepts-learned",
+    "title": "Week 1 Notes - Course Introduction",
+    "section": "",
+    "text": "• Tidyverse presents data as ‘tibbles’ – presents better\nit Uses data_\nR presents data as data frames\nUses data.\nSelect1 &lt;- select(car_data, column1, column2….)\nMutate(car_data, price_k = Price / 1000)\nFilter(car_data, Price &gt; 2000)\nRename – to rename columns"
+  },
+  {
+    "objectID": "weekly-notes/week-01-notes.html#coding-techniques",
+    "href": "weekly-notes/week-01-notes.html#coding-techniques",
+    "title": "Week 1 Notes - Course Introduction",
+    "section": "Coding Techniques",
+    "text": "Coding Techniques\n\n[New R functions or approaches]\n[Quarto features learned]"
+  },
+  {
+    "objectID": "weekly-notes/week-01-notes.html#questions-challenges",
+    "href": "weekly-notes/week-01-notes.html#questions-challenges",
+    "title": "Week 1 Notes - Course Introduction",
+    "section": "Questions & Challenges",
+    "text": "Questions & Challenges\n\n[What I didn’t fully understand]\n[Areas needing more practice]"
+  },
+  {
+    "objectID": "weekly-notes/week-01-notes.html#connections-to-policy",
+    "href": "weekly-notes/week-01-notes.html#connections-to-policy",
+    "title": "Week 1 Notes - Course Introduction",
+    "section": "Connections to Policy",
+    "text": "Connections to Policy\n\n[How this week’s content applies to real policy work]"
+  },
+  {
+    "objectID": "weekly-notes/week-01-notes.html#reflection",
+    "href": "weekly-notes/week-01-notes.html#reflection",
+    "title": "Week 1 Notes - Course Introduction",
+    "section": "Reflection",
+    "text": "Reflection\n\n[What was most interesting]\n[How I’ll apply this knowledge]"
+  },
+  {
+    "objectID": "instructions_week1.html",
+    "href": "instructions_week1.html",
+    "title": "Portfolio Setup Instructions",
+    "section": "",
+    "text": "Welcome to MUSA 5080! This guide will help you set up your personal portfolio repository for the semester.\n\n\nBy the end of this setup, you’ll have: - Your own portfolio repository on GitHub - live website showcasing your work - A place to document your learning journey\n\n\n\n\nThis is what you are building: Dr. Delmelle’s sample portfolio\n\n\n\n\nBefore starting, make sure you have: - [ ] A GitHub account (create one here if needed) - [ ] Quarto installed on your computer (download here) - [ ] R and RStudio installed\n\n\n\n\n\nYou should already be in your personal repository (created when you accepted the GitHub Classroom assignment). Now let’s personalize it!\n\n\n\nClick on the _quarto.yml file\nClick the pencil icon (✏️) to edit\nChange \"Your Name - MUSA 5080 Portfolio\" to include your actual name\nExample: \"Jane Smith - MUSA 5080 Portfolio\"\nClick “Commit changes” at the bottom\n\n\n\n\n\nClick on the index.qmd file\nClick the pencil icon (✏️) to edit\nUpdate the “About Me” section with your information:\n\nYour name and background\nYour email address\nYour GitHub username\nWhy you’re taking this course\n\nClick “Commit changes”\n\n\n\n\n\nNavigate to the weekly-notes folder\nClick on week-01-notes.qmd\nClick the pencil icon (✏️) to edit\nFill in your notes from the first class\nClick “Commit changes”\n\n\n\n\n\nThis step makes your portfolio visible as a live website!\n\nGo to Settings: Click the “Settings” tab at the top of your repository\nFind Pages: Scroll down and click “Pages” in the left sidebar\nConfigure Source:\n\nSource: Select “Deploy from a branch”\nBranch: Select “main”\nFolder: Select “/ docs”\n\nSave: Click “Save”\nWait: GitHub will show a message that your site is being built (this takes 1-5 minutes)\n\n\n\n\n\nFind Your URL: After a few minutes, GitHub will show your website URL at the top of the Pages settings\n\nIt will look like: https://yourusername.github.io/repository-name\n\nVisit Your Site: Click the link to see your live portfolio!\nBookmark It: Save this URL - you’ll submit it to Canvas\n\n\n\n\n\nCopy your live website URL\nGo to the Canvas assignment\nSubmit your URL\n\n\n\n\n\nIf you want to work on your computer and see changes before publishing:\n\n\n# Replace [your-repo-url] with your actual repository URL\ngit clone [your-repo-url]\ncd [your-repository-name]\n\n\n\n# Edit your files using RStudio\n# Preview your changes:\nquarto render\nquarto preview\n\n# When ready, save your changes:\ngit add .\ngit commit -m \"Update portfolio\"\ngit push\nYour live website will automatically update when you push changes!\n\n\n\n\nEach week you’ll: 1. Create a new file: weekly-notes/week-XX-notes.qmd 2. Copy the template from week-01-notes.qmd 3. Fill in your reflections and key concepts 4. Commit and push your changes\n\n\n\n\n\n\nWait longer: GitHub Pages can take up to 10 minutes to build\nCheck Actions tab: Look for any red X marks indicating build failures\nVerify Pages settings: Make sure you selected “main” branch and “/docs” folder\n\n\n\n\n\nCheck permissions: Make sure you’re in YOUR repository, not the template\nSign in: Ensure you’re signed into GitHub\n\n\n\n\n\nCheck YAML syntax: Make sure your _quarto.yml file has proper formatting\nVerify file names: Files should end in .qmd not .md\nLook at error messages: The Actions tab will show specific error details\n\n\n\n\n\nDon’t panic! Every change is tracked in Git\nSee history: Click the “History” button on any file to see previous versions\nRevert changes: You can always go back to a previous version\n\n\n\n\n\n\nCommit often: Save your work frequently with descriptive commit messages\nUse branches: For major changes, create a new branch and merge when ready\nPreview locally: Use quarto preview to see changes before publishing\nKeep it professional: This portfolio can be shared with future employers!\nDocument everything: Good documentation is as important as good analysis\n\n\n\n\n\nQuarto Documentation\nGitHub Docs\nMarkdown Guide\nGit Tutorial\n\n\n\n\nDuring Class: - Raise your hand for immediate help - Work with classmates - collaboration is encouraged for setup!\nOutside Class: - Office Hours: Mondays 1:30-3:00 PM - Email: delmelle@design.upenn.edu - GitHub Issues: Create an issue in your repository for technical problems - Canvas Discussion: Post questions others might have too\n\n\n\nBefore submitting, make sure you’ve: - [ ] Customized _quarto.yml with your name - [ ] Updated index.qmd with your information - [ ] Completed Week 1 notes - [ ] Enabled GitHub Pages - [ ] Verified your website loads correctly - [ ] Submitted your URL to Canvas\n\nNeed help? Don’t struggle alone - reach out during office hours (mine + TAs) or in class!"
+  },
+  {
+    "objectID": "instructions_week1.html#what-youre-building",
+    "href": "instructions_week1.html#what-youre-building",
+    "title": "Portfolio Setup Instructions",
+    "section": "",
+    "text": "By the end of this setup, you’ll have: - Your own portfolio repository on GitHub - live website showcasing your work - A place to document your learning journey"
+  },
+  {
+    "objectID": "instructions_week1.html#example",
+    "href": "instructions_week1.html#example",
+    "title": "Portfolio Setup Instructions",
+    "section": "",
+    "text": "This is what you are building: Dr. Delmelle’s sample portfolio"
+  },
+  {
+    "objectID": "instructions_week1.html#prerequisites",
+    "href": "instructions_week1.html#prerequisites",
+    "title": "Portfolio Setup Instructions",
+    "section": "",
+    "text": "Before starting, make sure you have: - [ ] A GitHub account (create one here if needed) - [ ] Quarto installed on your computer (download here) - [ ] R and RStudio installed"
+  },
+  {
+    "objectID": "instructions_week1.html#step-by-step-setup",
+    "href": "instructions_week1.html#step-by-step-setup",
+    "title": "Portfolio Setup Instructions",
+    "section": "",
+    "text": "You should already be in your personal repository (created when you accepted the GitHub Classroom assignment). Now let’s personalize it!\n\n\n\nClick on the _quarto.yml file\nClick the pencil icon (✏️) to edit\nChange \"Your Name - MUSA 5080 Portfolio\" to include your actual name\nExample: \"Jane Smith - MUSA 5080 Portfolio\"\nClick “Commit changes” at the bottom\n\n\n\n\n\nClick on the index.qmd file\nClick the pencil icon (✏️) to edit\nUpdate the “About Me” section with your information:\n\nYour name and background\nYour email address\nYour GitHub username\nWhy you’re taking this course\n\nClick “Commit changes”\n\n\n\n\n\nNavigate to the weekly-notes folder\nClick on week-01-notes.qmd\nClick the pencil icon (✏️) to edit\nFill in your notes from the first class\nClick “Commit changes”\n\n\n\n\n\nThis step makes your portfolio visible as a live website!\n\nGo to Settings: Click the “Settings” tab at the top of your repository\nFind Pages: Scroll down and click “Pages” in the left sidebar\nConfigure Source:\n\nSource: Select “Deploy from a branch”\nBranch: Select “main”\nFolder: Select “/ docs”\n\nSave: Click “Save”\nWait: GitHub will show a message that your site is being built (this takes 1-5 minutes)\n\n\n\n\n\nFind Your URL: After a few minutes, GitHub will show your website URL at the top of the Pages settings\n\nIt will look like: https://yourusername.github.io/repository-name\n\nVisit Your Site: Click the link to see your live portfolio!\nBookmark It: Save this URL - you’ll submit it to Canvas\n\n\n\n\n\nCopy your live website URL\nGo to the Canvas assignment\nSubmit your URL"
+  },
+  {
+    "objectID": "instructions_week1.html#working-on-your-portfolio-locally-optional-but-recommended",
+    "href": "instructions_week1.html#working-on-your-portfolio-locally-optional-but-recommended",
+    "title": "Portfolio Setup Instructions",
+    "section": "",
+    "text": "If you want to work on your computer and see changes before publishing:\n\n\n# Replace [your-repo-url] with your actual repository URL\ngit clone [your-repo-url]\ncd [your-repository-name]\n\n\n\n# Edit your files using RStudio\n# Preview your changes:\nquarto render\nquarto preview\n\n# When ready, save your changes:\ngit add .\ngit commit -m \"Update portfolio\"\ngit push\nYour live website will automatically update when you push changes!"
+  },
+  {
+    "objectID": "instructions_week1.html#weekly-workflow",
+    "href": "instructions_week1.html#weekly-workflow",
+    "title": "Portfolio Setup Instructions",
+    "section": "",
+    "text": "Each week you’ll: 1. Create a new file: weekly-notes/week-XX-notes.qmd 2. Copy the template from week-01-notes.qmd 3. Fill in your reflections and key concepts 4. Commit and push your changes"
+  },
+  {
+    "objectID": "instructions_week1.html#troubleshooting",
+    "href": "instructions_week1.html#troubleshooting",
+    "title": "Portfolio Setup Instructions",
+    "section": "",
+    "text": "Wait longer: GitHub Pages can take up to 10 minutes to build\nCheck Actions tab: Look for any red X marks indicating build failures\nVerify Pages settings: Make sure you selected “main” branch and “/docs” folder\n\n\n\n\n\nCheck permissions: Make sure you’re in YOUR repository, not the template\nSign in: Ensure you’re signed into GitHub\n\n\n\n\n\nCheck YAML syntax: Make sure your _quarto.yml file has proper formatting\nVerify file names: Files should end in .qmd not .md\nLook at error messages: The Actions tab will show specific error details\n\n\n\n\n\nDon’t panic! Every change is tracked in Git\nSee history: Click the “History” button on any file to see previous versions\nRevert changes: You can always go back to a previous version"
+  },
+  {
+    "objectID": "instructions_week1.html#pro-tips",
+    "href": "instructions_week1.html#pro-tips",
+    "title": "Portfolio Setup Instructions",
+    "section": "",
+    "text": "Commit often: Save your work frequently with descriptive commit messages\nUse branches: For major changes, create a new branch and merge when ready\nPreview locally: Use quarto preview to see changes before publishing\nKeep it professional: This portfolio can be shared with future employers!\nDocument everything: Good documentation is as important as good analysis"
+  },
+  {
+    "objectID": "instructions_week1.html#additional-resources",
+    "href": "instructions_week1.html#additional-resources",
+    "title": "Portfolio Setup Instructions",
+    "section": "",
+    "text": "Quarto Documentation\nGitHub Docs\nMarkdown Guide\nGit Tutorial"
+  },
+  {
+    "objectID": "instructions_week1.html#getting-help",
+    "href": "instructions_week1.html#getting-help",
+    "title": "Portfolio Setup Instructions",
+    "section": "",
+    "text": "During Class: - Raise your hand for immediate help - Work with classmates - collaboration is encouraged for setup!\nOutside Class: - Office Hours: Mondays 1:30-3:00 PM - Email: delmelle@design.upenn.edu - GitHub Issues: Create an issue in your repository for technical problems - Canvas Discussion: Post questions others might have too"
+  },
+  {
+    "objectID": "instructions_week1.html#checklist",
+    "href": "instructions_week1.html#checklist",
+    "title": "Portfolio Setup Instructions",
+    "section": "",
+    "text": "Before submitting, make sure you’ve: - [ ] Customized _quarto.yml with your name - [ ] Updated index.qmd with your information - [ ] Completed Week 1 notes - [ ] Enabled GitHub Pages - [ ] Verified your website loads correctly - [ ] Submitted your URL to Canvas\n\nNeed help? Don’t struggle alone - reach out during office hours (mine + TAs) or in class!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MUSA 5080 Portfolio",
+    "section": "",
+    "text": "This portfolio documents my learning journey in Public Policy Analytics (MUSA 5080).\n\n\nAdvanced spatial analysis and data science for urban planning and public policy.\n\n\n\n\nWeekly Notes: My learning reflections and key concepts\nLabs: Completed assignments and analyses\nFinal Project: Capstone modeling challenge\n\n\n\n\nI’m a second year Master of City Planning student at the Weitzman School of Design. I’m taking this course to strengthen my data and modeling skills.\n\n\n\n\nEmail: [ama88@upenn.edu]\nGitHub: [@annaliseabraham8-star]"
+  },
+  {
+    "objectID": "index.html#about-this-course",
+    "href": "index.html#about-this-course",
+    "title": "MUSA 5080 Portfolio",
+    "section": "",
+    "text": "Advanced spatial analysis and data science for urban planning and public policy."
+  },
+  {
+    "objectID": "index.html#portfolio-structure",
+    "href": "index.html#portfolio-structure",
+    "title": "MUSA 5080 Portfolio",
+    "section": "",
+    "text": "Weekly Notes: My learning reflections and key concepts\nLabs: Completed assignments and analyses\nFinal Project: Capstone modeling challenge"
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "MUSA 5080 Portfolio",
+    "section": "",
+    "text": "I’m a second year Master of City Planning student at the Weitzman School of Design. I’m taking this course to strengthen my data and modeling skills."
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "MUSA 5080 Portfolio",
+    "section": "",
+    "text": "Email: [ama88@upenn.edu]\nGitHub: [@annaliseabraham8-star]"
+  },
+  {
+    "objectID": "labs/lab1/assignment1_template.html",
+    "href": "labs/lab1/assignment1_template.html",
+    "title": "Assignment 1: Census Data Quality for Policy Decisions",
+    "section": "",
+    "text": "You are a data analyst for the PA Department of Human Services. The department is considering implementing an algorithmic system to identify communities that should receive priority for social service funding and outreach programs. Your supervisor has asked you to evaluate the quality and reliability of available census data to inform this decision.\nDrawing on our Week 2 discussion of algorithmic bias, you need to assess not just what the data shows, but how reliable it is and what communities might be affected by data quality issues.\n\n\n\n\nApply dplyr functions to real census data for policy analysis\nEvaluate data quality using margins of error\nConnect technical analysis to algorithmic decision-making\nIdentify potential equity implications of data reliability issues\nCreate professional documentation for policy stakeholders\n\n\n\n\nSubmit by posting your updated portfolio link on Canvas. Your assignment should be accessible at your-portfolio-url/assignments/assignment_1/\nMake sure to update your _quarto.yml navigation to include this assignment under an “Assignments” menu."
+  },
+  {
+    "objectID": "labs/lab1/assignment1_template.html#scenario",
+    "href": "labs/lab1/assignment1_template.html#scenario",
+    "title": "Assignment 1: Census Data Quality for Policy Decisions",
+    "section": "",
+    "text": "You are a data analyst for the PA Department of Human Services. The department is considering implementing an algorithmic system to identify communities that should receive priority for social service funding and outreach programs. Your supervisor has asked you to evaluate the quality and reliability of available census data to inform this decision.\nDrawing on our Week 2 discussion of algorithmic bias, you need to assess not just what the data shows, but how reliable it is and what communities might be affected by data quality issues."
+  },
+  {
+    "objectID": "labs/lab1/assignment1_template.html#learning-objectives",
+    "href": "labs/lab1/assignment1_template.html#learning-objectives",
+    "title": "Assignment 1: Census Data Quality for Policy Decisions",
+    "section": "",
+    "text": "Apply dplyr functions to real census data for policy analysis\nEvaluate data quality using margins of error\nConnect technical analysis to algorithmic decision-making\nIdentify potential equity implications of data reliability issues\nCreate professional documentation for policy stakeholders"
+  },
+  {
+    "objectID": "labs/lab1/assignment1_template.html#submission-instructions",
+    "href": "labs/lab1/assignment1_template.html#submission-instructions",
+    "title": "Assignment 1: Census Data Quality for Policy Decisions",
+    "section": "",
+    "text": "Submit by posting your updated portfolio link on Canvas. Your assignment should be accessible at your-portfolio-url/assignments/assignment_1/\nMake sure to update your _quarto.yml navigation to include this assignment under an “Assignments” menu."
+  },
+  {
+    "objectID": "labs/lab1/assignment1_template.html#data-retrieval",
+    "href": "labs/lab1/assignment1_template.html#data-retrieval",
+    "title": "Assignment 1: Census Data Quality for Policy Decisions",
+    "section": "2.1 Data Retrieval",
+    "text": "2.1 Data Retrieval\nYour Task: Use get_acs() to retrieve county-level data for your chosen state.\nRequirements: - Geography: county level - Variables: median household income (B19013_001) and total population (B01003_001)\n- Year: 2022 - Survey: acs5 - Output format: wide\nHint: Remember to give your variables descriptive names using the variables = c(name = \"code\") syntax.\n\n# Write your get_acs() code here\n\npa_data &lt;- get_acs(\n  geography = \"county\",\n  variables = c(\n    total_pop = \"B01003_001\",\n    median_income = \"B19013_001\"\n  ),\n  state = \"PA\",\n  year = 2022,\n  output = \"wide\"  # Makes analysis easier\n)\n\n# Clean the county names to remove state name and \"County\" \n# Hint: use mutate() with str_remove()\n\npa_data &lt;- pa_data %&gt;%\n  mutate(\n    NAME = str_remove(NAME, \", Pennsylvania\"),  # remove state name\n    NAME = str_remove(NAME, \" County\")          # remove \"County\"\n  )\n\n# Display the first few rows"
+  },
+  {
+    "objectID": "labs/lab1/assignment1_template.html#data-quality-assessment",
+    "href": "labs/lab1/assignment1_template.html#data-quality-assessment",
+    "title": "Assignment 1: Census Data Quality for Policy Decisions",
+    "section": "2.2 Data Quality Assessment",
+    "text": "2.2 Data Quality Assessment\nYour Task: Calculate margin of error percentages and create reliability categories.\nRequirements: - Calculate MOE percentage: (margin of error / estimate) * 100 - Create reliability categories: - High Confidence: MOE &lt; 5% - Moderate Confidence: MOE 5-10%\n- Low Confidence: MOE &gt; 10% - Create a flag for unreliable estimates (MOE &gt; 10%)\nHint: Use mutate() with case_when() for the categories.\n\npaa_data_alt &lt;- pa_data %&gt;%\n  mutate(\n    moe_pct = (median_incomeM / median_incomeE) * 100,\n    reliability = case_when(\n      moe_pct &lt; 5 ~ \"High Confidence\",\n      moe_pct &gt;= 5 & moe_pct &lt;= 10 ~ \"Moderate Confidence\",\n      moe_pct &gt; 10 ~ \"Low Confidence\"\n    ),\n    unreliable_flag = moe_pct &gt; 10\n  )\n\nls()\n\n[1] \"pa_data\"      \"paa_data_alt\"\n\n# Calculate MOE percentage and reliability categories using mutate()\n\n# Create a summary showing count of counties in each reliability category\n# Hint: use count() and mutate() to add percentages\n\n\n\nreliability_summary &lt;- paa_data_alt %&gt;%\n  count(reliability) %&gt;%\n  mutate(\n    pct = n / sum(n) * 100\n  )\n  \nls()\n\n[1] \"pa_data\"             \"paa_data_alt\"        \"reliability_summary\""
+  },
+  {
+    "objectID": "labs/lab1/assignment1_template.html#high-uncertainty-counties",
+    "href": "labs/lab1/assignment1_template.html#high-uncertainty-counties",
+    "title": "Assignment 1: Census Data Quality for Policy Decisions",
+    "section": "2.3 High Uncertainty Counties",
+    "text": "2.3 High Uncertainty Counties\n“Your Task: Identify the 5 counties with the highest MOE percentages.”\n“Requirements: - Sort by MOE percentage (highest first) - Select the top 5 counties - Display: county name, median income, margin of error, MOE percentage, reliability category - Format as a professional table using kable()\nHint: Use arrange(), slice(), and select() functions.\n\n# Create table of top 5 counties by MOE percentage\n\ntop5_moe &lt;- paa_data_alt %&gt;%\n  arrange(desc(moe_pct)) %&gt;%\n  slice_head(n = 5) %&gt;%\n  select(\n    County = NAME,\n    \"Median Income\" = median_incomeE,\n    \"Margin of Error\" = median_incomeM,\n    \"MOE %\" = moe_pct,\n    Reliability = reliability\n  )\n\n\n# Format as table with kable() - include appropriate column names and caption\n\nkable(\n  top5_moe,\n  caption = \"Top 5 Counties with Highest MOE Percentages\",\n  digits = 1,\n  format.args = list(big.mark = \",\")\n)\n\n\nTop 5 Counties with Highest MOE Percentages\n\n\nCounty\nMedian Income\nMargin of Error\nMOE %\nReliability\n\n\n\n\nForest\n46,188\n4,612\n10.0\nModerate Confidence\n\n\nSullivan\n62,910\n5,821\n9.3\nModerate Confidence\n\n\nUnion\n64,914\n4,753\n7.3\nModerate Confidence\n\n\nMontour\n72,626\n5,146\n7.1\nModerate Confidence\n\n\nElk\n61,672\n4,091\n6.6\nModerate Confidence\n\n\n\n\n\nData Quality Commentary:\n[Write 2-3 sentences explaining what these results mean for algorithmic decision-making. Consider: Which counties might be poorly served by algorithms that rely on this income data? What factors might contribute to higher uncertainty? - Counties with lower confidence levels have less reliable data. A large range in the median income values or a small sample size could lead to higher levels of uncertainty.]”"
+  },
+  {
+    "objectID": "labs/lab1/assignment1_template.html#focus-area-selection",
+    "href": "labs/lab1/assignment1_template.html#focus-area-selection",
+    "title": "Assignment 1: Census Data Quality for Policy Decisions",
+    "section": "3.1 Focus Area Selection",
+    "text": "3.1 Focus Area Selection\n“Your Task: Select 2-3 counties from your reliability analysis for detailed tract-level study.”\n“Strategy: Choose counties that represent different reliability levels (e.g., 1 high confidence, 1 moderate, 1 low confidence) to compare how data quality varies.”"
+  },
+  {
+    "objectID": "labs/lab1/assignment1_template.html#tract-level-demographics",
+    "href": "labs/lab1/assignment1_template.html#tract-level-demographics",
+    "title": "Assignment 1: Census Data Quality for Policy Decisions",
+    "section": "3.2 Tract-Level Demographics",
+    "text": "3.2 Tract-Level Demographics\nYour Task: Get demographic data for census tracts in your selected counties.\nRequirements: - Geography: tract level - Variables: white alone (B03002_003), Black/African American (B03002_004), Hispanic/Latino (B03002_012), total population (B03002_001) - Use the same state and year as before - Output format: wide - Challenge: You’ll need county codes, not names. Look at the GEOID patterns in your county data for hints.”\n\n# Define your race/ethnicity variables with descriptive names\n\n# Use get_acs() to retrieve tract-level data\n# Hint: You may need to specify county codes in the county parameter\n\n# Calculate percentage of each group using mutate()\n# Create percentages for white, Black, and Hispanic populations\n\n# Add readable tract and county name columns using str_extract() or similar\n\n\nlibrary(stringr)\n\nrace_vars &lt;- c(\n  total_pop = \"B03002_001\",\n  white_alone = \"B03002_003\",\n  black_alone = \"B03002_004\",\n  hispanic = \"B03002_012\"\n)\n\n# get tracts for Allegheny County (003) and Forest County (053) in PA\ntract_demographics &lt;- get_acs(\n  geography = \"tract\",\n  state = \"42\",             # Pennsylvania FIPS\n  county = c(\"003\", \"053\"), # county codes\n  variables = race_vars,\n  year = 2022,              # use same year as before\n  survey = \"acs5\",\n  output = \"wide\"\n) %&gt;%\n  # Calculate percentages\n  mutate(\n    pct_white = 100 * white_aloneE / total_popE,\n    pct_black = 100 * black_aloneE / total_popE,\n    pct_hispanic = 100 * hispanicE / total_popE\n  ) %&gt;%\n  # Extract readable county and tract codes from GEOID\n  mutate(\n    state_fips = str_sub(GEOID, 1, 2),\n    county_fips = str_sub(GEOID, 3, 5),\n    tract_code = str_sub(GEOID, 6, 11)\n  )"
+  },
+  {
+    "objectID": "labs/lab1/assignment1_template.html#demographic-analysis",
+    "href": "labs/lab1/assignment1_template.html#demographic-analysis",
+    "title": "Assignment 1: Census Data Quality for Policy Decisions",
+    "section": "3.3 Demographic Analysis",
+    "text": "3.3 Demographic Analysis\nYour Task: Analyze the demographic patterns in your selected areas.\n\n# Find the tract with the highest percentage of Hispanic/Latino residents\n# Hint: use arrange() and slice() to get the top tract\n\ntop_hispanic_tract &lt;- tract_demographics %&gt;%\n  arrange(desc(pct_hispanic)) %&gt;%\n  slice(1) %&gt;%\n  select(NAME, pct_white, pct_black, pct_hispanic)\n\n# Calculate average demographics by county using group_by() and summarize()\n# Show: number of tracts, average percentage for each racial/ethnic group\n\ncounty_summary &lt;- tract_demographics %&gt;%\n  group_by(county_fips) %&gt;%   # use county code\n  summarize(\n    n_tracts = n(),\n    avg_pct_white = mean(pct_white, na.rm = TRUE),\n    avg_pct_black = mean(pct_black, na.rm = TRUE),\n    avg_pct_hispanic = mean(pct_hispanic, na.rm = TRUE)\n  ) %&gt;%\n  ungroup()\n\n# Create a nicely formatted table of your results using kable()\n\ncounty_summary %&gt;%\n  kable(digits = 1, caption = \"Average Demographics by County (ACS 2022 5-year)\")\n\n\nAverage Demographics by County (ACS 2022 5-year)\n\n\ncounty_fips\nn_tracts\navg_pct_white\navg_pct_black\navg_pct_hispanic\n\n\n\n\n003\n394\n74.5\n15.4\n2.4\n\n\n053\n2\n71.2\n13.6\n7.4"
+  },
+  {
+    "objectID": "labs/lab1/assignment1_template.html#moe-analysis-for-demographic-variables",
+    "href": "labs/lab1/assignment1_template.html#moe-analysis-for-demographic-variables",
+    "title": "Assignment 1: Census Data Quality for Policy Decisions",
+    "section": "4.1 MOE Analysis for Demographic Variables",
+    "text": "4.1 MOE Analysis for Demographic Variables\nYour Task: Examine margins of error for demographic variables to see if some communities have less reliable data.\nRequirements: - Calculate MOE percentages for each demographic variable - Flag tracts where any demographic variable has MOE &gt; 15% - Create summary statistics\n\n# Calculate MOE percentages for white, Black, and Hispanic variables\n# Hint: use the same formula as before (margin/estimate * 100)\n\n# Create a flag for tracts with high MOE on any demographic variable\n# Use logical operators (| for OR) in an ifelse() statement\n\n# Create summary statistics showing how many tracts have data quality issues\n\ndemographic_moe &lt;- tract_demographics %&gt;%\n  # 1. Calculate MOE percentages\n  mutate(\n    moe_white = 100 * white_aloneM / white_aloneE,\n    moe_black = 100 * black_aloneM / black_aloneE,\n    moe_hispanic = 100 * hispanicM / hispanicE\n  ) %&gt;%\n  # 2. Replace Inf with NA\n  mutate(\n    across(starts_with(\"moe_\"), ~ ifelse(is.infinite(.), NA, .))\n  ) %&gt;%\n  # 3. Flag high MOE tracts (any variable &gt; 15%)\n  mutate(\n    high_moe_flag = ifelse(\n      moe_white &gt; 15 | moe_black &gt; 15 | moe_hispanic &gt; 15,\n      TRUE, FALSE\n    )\n  )\n\n# 3. Summary statistics\nmoe_summary &lt;- demographic_moe %&gt;%\n  summarize(\n    total_tracts = n(),\n    tracts_high_moe = sum(high_moe_flag, na.rm = TRUE),\n    pct_high_moe = 100 * tracts_high_moe / total_tracts,\n    avg_moe_white = mean(moe_white, na.rm = TRUE),\n    avg_moe_black = mean(moe_black, na.rm = TRUE),\n    avg_moe_hispanic = mean(moe_hispanic, na.rm = TRUE)\n  )"
+  },
+  {
+    "objectID": "labs/lab1/assignment1_template.html#pattern-analysis",
+    "href": "labs/lab1/assignment1_template.html#pattern-analysis",
+    "title": "Assignment 1: Census Data Quality for Policy Decisions",
+    "section": "4.2 Pattern Analysis",
+    "text": "4.2 Pattern Analysis\n“Your Task: Investigate whether data quality problems are randomly distributed or concentrated in certain types of communities.”\n\n# Group tracts by whether they have high MOE issues\n# Calculate average characteristics for each group:\n# - population size, demographic percentages\n\n# Use group_by() and summarize() to create this comparison\n# Create a professional table showing the patterns\n\npattern_analysis &lt;- demographic_moe %&gt;%\n  group_by(high_moe_flag) %&gt;%\n  summarize(\n    n_tracts = n(),\n    avg_population = mean(total_popE, na.rm = TRUE),\n    avg_pct_white = mean(pct_white, na.rm = TRUE),\n    avg_pct_black = mean(pct_black, na.rm = TRUE),\n    avg_pct_hispanic = mean(pct_hispanic, na.rm = TRUE)\n  ) %&gt;%\n  ungroup()\n\n# Nicely formatted comparison table\n\npattern_analysis %&gt;%\n  kable(\n    digits = 1,\n    caption = \"Comparison of Tracts by Data Quality (High MOE vs. Reliable)\"\n  )\n\n\nComparison of Tracts by Data Quality (High MOE vs. Reliable)\n\n\n\n\n\n\n\n\n\n\nhigh_moe_flag\nn_tracts\navg_population\navg_pct_white\navg_pct_black\navg_pct_hispanic\n\n\n\n\nTRUE\n387\n3231.3\n74.4\n15.4\n2.4\n\n\nNA\n9\n193.2\n95.2\n0.0\n0.0\n\n\n\n\n\n“Pattern Analysis: [Describe any patterns you observe. Do certain types of communities have less reliable data? What might explain this? All the census tracts I looked at had MOE issues. The Black and Latino population data did have higher MOEs in general, perhaps because they had a smaller sample size. - Would appreciate feedback on this!]”"
+  },
+  {
+    "objectID": "labs/lab1/assignment1_template.html#analysis-integration-and-professional-summary",
+    "href": "labs/lab1/assignment1_template.html#analysis-integration-and-professional-summary",
+    "title": "Assignment 1: Census Data Quality for Policy Decisions",
+    "section": "5.1 Analysis Integration and Professional Summary",
+    "text": "5.1 Analysis Integration and Professional Summary\n“Your Task: Write an executive summary that integrates findings from all four analyses.\nExecutive Summary Requirements: 1. Overall Pattern Identification: What are the systematic patterns across all your analyses? 2. Equity Assessment: Which communities face the greatest risk of algorithmic bias based on your findings? 3. Root Cause Analysis: What underlying factors drive both data quality issues and bias risk? 4. Strategic Recommendations: What should the Department implement to address these systematic issues?\nExecutive Summary:\n[Our analysis of tract-level ACS data reveals that data quality problems are not randomly distributed across communities but follow clear and systematic patterns. Tracts with smaller populations consistently show higher margins of error for race and ethnicity variables, often exceeding the 15% threshold we defined for reliability concerns. In addition, tracts with higher shares of minority residents—particularly Hispanic and Black populations—are more likely to have elevated uncertainty in their demographic estimates. These findings indicate that the reliability of ACS data is unevenly distributed, with some communities consistently at a disadvantage.\nThis uneven distribution of reliability has important equity implications. Communities that are rural, sparsely populated, or home to significant minority populations face the greatest risk of algorithmic bias. If public agencies or partner organizations treat ACS point estimates as precise without accounting for uncertainty, decisions around resource allocation, service provision, or equity monitoring could systematically disadvantage these groups. In practice, the populations already most vulnerable to underinvestment and underrepresentation in surveys are also the ones most likely to be mischaracterized by models built on noisy or unstable data.\nThe root causes of these data quality disparities lie in both statistical and structural factors. Survey sampling variability is highest where population counts are low, leading to inflated margins of error in small tracts. At the same time, nonresponse and undercoverage are more common in communities with higher proportions of immigrants, renters, and low-income households. These factors compound one another, producing both unreliable estimates and heightened risk of algorithmic bias. The patterns observed are thus not only statistical artifacts but reflections of deeper structural inequities in data collection and representation.\nTo address these challenges, the Department should adopt a multi-layered strategy. In the short term, all products and models should explicitly incorporate margins of error, with unreliable tracts either flagged, down-weighted, or aggregated to higher levels of geography. In the medium term, statistical smoothing methods and fairness audits can reduce the impact of noisy inputs on decision-making. Over the long term, investment in targeted data collection and stronger transparency requirements will be necessary to ensure that all communities are represented with sufficient accuracy. By embedding data reliability standards into analytic workflows, the Department can both mitigate bias and build greater trust in its use of demographic data.]"
+  },
+  {
+    "objectID": "labs/lab1/assignment1_template.html#specific-recommendations",
+    "href": "labs/lab1/assignment1_template.html#specific-recommendations",
+    "title": "Assignment 1: Census Data Quality for Policy Decisions",
+    "section": "6.3 Specific Recommendations",
+    "text": "6.3 Specific Recommendations\nYour Task: Create a decision framework for algorithm implementation.\n\n# Create a summary table using your county reliability data\n# Include: county name, median income, MOE percentage, reliability category\n\n# Add a new column with algorithm recommendations using case_when():\n# - High Confidence: \"Safe for algorithmic decisions\"\n# - Moderate Confidence: \"Use with caution - monitor outcomes\"  \n# - Low Confidence: \"Requires manual review or additional data\"\n\n# Format as a professional table with kable()\"\n\n\ncounty_summary &lt;- paa_data_alt %&gt;%\n  select(\n    County = NAME,\n    `Median Income` = median_incomeE,\n    `MOE %` = moe_pct,\n    Reliability = reliability\n  ) %&gt;%\n  mutate(\n    Recommendation = case_when(\n      Reliability == \"High Confidence\" ~ \"Safe for algorithmic decisions\",\n      Reliability == \"Moderate Confidence\" ~ \"Use with caution - monitor outcomes\",\n      Reliability == \"Low Confidence\" ~ \"Requires manual review or additional data\",\n      TRUE ~ \"Unclassified\"\n    )\n  )\n\n# Nicely formatted table\ncounty_summary %&gt;%\n  kable(\n    digits = 1,\n    caption = \"County Reliability and Algorithmic Recommendations\"\n  )\n\n\nCounty Reliability and Algorithmic Recommendations\n\n\n\n\n\n\n\n\n\nCounty\nMedian Income\nMOE %\nReliability\nRecommendation\n\n\n\n\nAdams\n78975\n4.2\nHigh Confidence\nSafe for algorithmic decisions\n\n\nAllegheny\n72537\n1.2\nHigh Confidence\nSafe for algorithmic decisions\n\n\nArmstrong\n61011\n3.6\nHigh Confidence\nSafe for algorithmic decisions\n\n\nBeaver\n67194\n2.3\nHigh Confidence\nSafe for algorithmic decisions\n\n\nBedford\n58337\n4.5\nHigh Confidence\nSafe for algorithmic decisions\n\n\nBerks\n74617\n1.6\nHigh Confidence\nSafe for algorithmic decisions\n\n\nBlair\n59386\n3.5\nHigh Confidence\nSafe for algorithmic decisions\n\n\nBradford\n60650\n3.6\nHigh Confidence\nSafe for algorithmic decisions\n\n\nBucks\n107826\n1.4\nHigh Confidence\nSafe for algorithmic decisions\n\n\nButler\n82932\n2.6\nHigh Confidence\nSafe for algorithmic decisions\n\n\nCambria\n54221\n3.3\nHigh Confidence\nSafe for algorithmic decisions\n\n\nCameron\n46186\n5.6\nModerate Confidence\nUse with caution - monitor outcomes\n\n\nCarbon\n64538\n5.3\nModerate Confidence\nUse with caution - monitor outcomes\n\n\nCentre\n70087\n2.8\nHigh Confidence\nSafe for algorithmic decisions\n\n\nChester\n118574\n1.7\nHigh Confidence\nSafe for algorithmic decisions\n\n\nClarion\n58690\n4.4\nHigh Confidence\nSafe for algorithmic decisions\n\n\nClearfield\n56982\n2.8\nHigh Confidence\nSafe for algorithmic decisions\n\n\nClinton\n59011\n3.9\nHigh Confidence\nSafe for algorithmic decisions\n\n\nColumbia\n59457\n3.8\nHigh Confidence\nSafe for algorithmic decisions\n\n\nCrawford\n58734\n3.9\nHigh Confidence\nSafe for algorithmic decisions\n\n\nCumberland\n82849\n2.2\nHigh Confidence\nSafe for algorithmic decisions\n\n\nDauphin\n71046\n2.3\nHigh Confidence\nSafe for algorithmic decisions\n\n\nDelaware\n86390\n1.5\nHigh Confidence\nSafe for algorithmic decisions\n\n\nElk\n61672\n6.6\nModerate Confidence\nUse with caution - monitor outcomes\n\n\nErie\n59396\n2.6\nHigh Confidence\nSafe for algorithmic decisions\n\n\nFayette\n55579\n4.2\nHigh Confidence\nSafe for algorithmic decisions\n\n\nForest\n46188\n10.0\nModerate Confidence\nUse with caution - monitor outcomes\n\n\nFranklin\n71808\n3.0\nHigh Confidence\nSafe for algorithmic decisions\n\n\nFulton\n63153\n3.6\nHigh Confidence\nSafe for algorithmic decisions\n\n\nGreene\n66283\n6.4\nModerate Confidence\nUse with caution - monitor outcomes\n\n\nHuntingdon\n61300\n4.7\nHigh Confidence\nSafe for algorithmic decisions\n\n\nIndiana\n57170\n4.6\nHigh Confidence\nSafe for algorithmic decisions\n\n\nJefferson\n56607\n3.4\nHigh Confidence\nSafe for algorithmic decisions\n\n\nJuniata\n61915\n4.8\nHigh Confidence\nSafe for algorithmic decisions\n\n\nLackawanna\n63739\n2.6\nHigh Confidence\nSafe for algorithmic decisions\n\n\nLancaster\n81458\n1.8\nHigh Confidence\nSafe for algorithmic decisions\n\n\nLawrence\n57585\n3.1\nHigh Confidence\nSafe for algorithmic decisions\n\n\nLebanon\n72532\n2.7\nHigh Confidence\nSafe for algorithmic decisions\n\n\nLehigh\n74973\n2.0\nHigh Confidence\nSafe for algorithmic decisions\n\n\nLuzerne\n60836\n2.4\nHigh Confidence\nSafe for algorithmic decisions\n\n\nLycoming\n63437\n4.4\nHigh Confidence\nSafe for algorithmic decisions\n\n\nMcKean\n57861\n4.7\nHigh Confidence\nSafe for algorithmic decisions\n\n\nMercer\n57353\n3.6\nHigh Confidence\nSafe for algorithmic decisions\n\n\nMifflin\n58012\n3.4\nHigh Confidence\nSafe for algorithmic decisions\n\n\nMonroe\n80656\n3.2\nHigh Confidence\nSafe for algorithmic decisions\n\n\nMontgomery\n107441\n1.3\nHigh Confidence\nSafe for algorithmic decisions\n\n\nMontour\n72626\n7.1\nModerate Confidence\nUse with caution - monitor outcomes\n\n\nNorthampton\n82201\n1.9\nHigh Confidence\nSafe for algorithmic decisions\n\n\nNorthumberland\n55952\n2.7\nHigh Confidence\nSafe for algorithmic decisions\n\n\nPerry\n76103\n3.2\nHigh Confidence\nSafe for algorithmic decisions\n\n\nPhiladelphia\n57537\n1.4\nHigh Confidence\nSafe for algorithmic decisions\n\n\nPike\n76416\n4.9\nHigh Confidence\nSafe for algorithmic decisions\n\n\nPotter\n56491\n4.4\nHigh Confidence\nSafe for algorithmic decisions\n\n\nSchuylkill\n63574\n2.4\nHigh Confidence\nSafe for algorithmic decisions\n\n\nSnyder\n65914\n5.6\nModerate Confidence\nUse with caution - monitor outcomes\n\n\nSomerset\n57357\n2.8\nHigh Confidence\nSafe for algorithmic decisions\n\n\nSullivan\n62910\n9.3\nModerate Confidence\nUse with caution - monitor outcomes\n\n\nSusquehanna\n63968\n3.1\nHigh Confidence\nSafe for algorithmic decisions\n\n\nTioga\n59707\n3.2\nHigh Confidence\nSafe for algorithmic decisions\n\n\nUnion\n64914\n7.3\nModerate Confidence\nUse with caution - monitor outcomes\n\n\nVenango\n59278\n3.4\nHigh Confidence\nSafe for algorithmic decisions\n\n\nWarren\n57925\n5.2\nModerate Confidence\nUse with caution - monitor outcomes\n\n\nWashington\n74403\n2.4\nHigh Confidence\nSafe for algorithmic decisions\n\n\nWayne\n59240\n4.8\nHigh Confidence\nSafe for algorithmic decisions\n\n\nWestmoreland\n69454\n2.0\nHigh Confidence\nSafe for algorithmic decisions\n\n\nWyoming\n67968\n3.9\nHigh Confidence\nSafe for algorithmic decisions\n\n\nYork\n79183\n1.8\nHigh Confidence\nSafe for algorithmic decisions\n\n\n\n\n\nKey Recommendations\nYour Task Use your analysis results to provide specific guidance to the department.\n\nCounties suitable for immediate algorithmic implementation: [Counties with high confidence data are appropriate because they have low margins of error.]\nCounties requiring additional oversight: [List counties with moderate confidence data and describe what kind of monitoring would be needed. The counties with moderate confidence data include Cameron, Carbon, Elk, Forest, Greene, Montour, Snyder, Sullivan, Union, and Warren counties. Monitoring could include tracking discrepancies or unusual trends or flagging certain results for human review.]\nCounties needing alternative approaches: None"
+  },
+  {
+    "objectID": "labs/lab1/assignment1_template.html#questions-for-further-investigation",
+    "href": "labs/lab1/assignment1_template.html#questions-for-further-investigation",
+    "title": "Assignment 1: Census Data Quality for Policy Decisions",
+    "section": "Questions for Further Investigation",
+    "text": "Questions for Further Investigation\n[List 2-3 questions that your analysis raised that you’d like to explore further in future assignments. Consider questions about spatial patterns, time trends, or other demographic factors.\nHow can data be assessed if all tracts have high margins of error? How can we judge whether certain issues or traits are spatially signifigant?]"
+  }
+]
