@@ -120,7 +120,7 @@ pa_data <- pa_data %>%
 
 **Hint:** Use `mutate()` with `case_when()` for the categories.
 
-pa_data_alt <- pa_data %>%
+paa_data_alt <- pa_data %>%
   mutate(
     moe_pct = (median_incomeM / median_incomeE) * 100,
     reliability = case_when(
@@ -131,24 +131,29 @@ pa_data_alt <- pa_data %>%
     unreliable_flag = moe_pct > 10
   )
 
-```{r income-reliability}
+```{r check-objects}
+ls()
+
 # Calculate MOE percentage and reliability categories using mutate()
 
 # Create a summary showing count of counties in each reliability category
 # Hint: use count() and mutate() to add percentages
-```
 
-reliability_summary <- pa_data_alt %>%
+
+
+reliability_summary <- paa_data_alt %>%
   count(reliability) %>%
   mutate(
     pct = n / sum(n) * 100
   )
   
+ls()
+  
 ## 2.3 High Uncertainty Counties
 
-**Your Task:** Identify the 5 counties with the highest MOE percentages.
+"**Your Task:** Identify the 5 counties with the highest MOE percentages."
 
-**Requirements:**
+"**Requirements:**
 - Sort by MOE percentage (highest first)
 - Select the top 5 counties
 - Display: county name, median income, margin of error, MOE percentage, reliability category
@@ -156,23 +161,25 @@ reliability_summary <- pa_data_alt %>%
 
 **Hint:** Use `arrange()`, `slice()`, and `select()` functions.
 
-```{r high-uncertainty}
+```{r high-uncertainty}"
+
+
 # Create table of top 5 counties by MOE percentage
 
-top5_moe <- pa_data_alt %>%
+top5_moe <- paa_data_alt %>%
   arrange(desc(moe_pct)) %>%
   slice_head(n = 5) %>%
   select(
     County = NAME,
-    `Median Income` = median_incomeE,
-    `Margin of Error` = median_incomeM,
-    `MOE %` = moe_pct,
+    "Median Income" = median_incomeE,
+    "Margin of Error" = median_incomeM,
+    "MOE %" = moe_pct,
     Reliability = reliability
   )
 
 
 # Format as table with kable() - include appropriate column names and caption
-```
+
 kable(
   top5_moe,
   caption = "Top 5 Counties with Highest MOE Percentages",
@@ -180,27 +187,27 @@ kable(
   format.args = list(big.mark = ",")
 )
 
-**Data Quality Commentary:**
+"**Data Quality Commentary:**
 
-[Write 2-3 sentences explaining what these results mean for algorithmic decision-making. Consider: Which counties might be poorly served by algorithms that rely on this income data? What factors might contribute to higher uncertainty? - Counties with lower confidence levels have less reliable data. A large range in the median income values or a small sample size could lead to higher levels of uncertainty.]
+[Write 2-3 sentences explaining what these results mean for algorithmic decision-making. Consider: Which counties might be poorly served by algorithms that rely on this income data? What factors might contribute to higher uncertainty? - Counties with lower confidence levels have less reliable data. A large range in the median income values or a small sample size could lead to higher levels of uncertainty.]"
 
 # Part 3: Neighborhood-Level Analysis
 
 ## 3.1 Focus Area Selection
 
-**Your Task:** Select 2-3 counties from your reliability analysis for detailed tract-level study.
+"**Your Task:** Select 2-3 counties from your reliability analysis for detailed tract-level study."
 
-**Strategy:** Choose counties that represent different reliability levels (e.g., 1 high confidence, 1 moderate, 1 low confidence) to compare how data quality varies.
+"**Strategy:** Choose counties that represent different reliability levels (e.g., 1 high confidence, 1 moderate, 1 low confidence) to compare how data quality varies."
 
-```{r select-counties}
+
 # Use filter() to select 2-3 counties from your county_reliability data
 # Store the selected counties in a variable called selected_counties
 
 # Display the selected counties with their key characteristics
 # Show: county name, median income, MOE percentage, reliability category
-```
 
-selected_counties <- pa_data_alt %>%
+
+selected_counties <- paa_data_alt %>%
   filter(NAME %in% c("Forest", 
                      "Allegheny")) %>%
   select(
@@ -212,7 +219,7 @@ selected_counties <- pa_data_alt %>%
 
 selected_counties                   
 
-**Comment on the output:** [Allegheny County has a median income of $72537 and a margin of error of 1.2% while Forest County has a median income of $46188 and a margin of error of 10%.]
+"**Comment on the output:** [Allegheny County has a median income of $72537 and a margin of error of 1.2% while Forest County has a median income of $46188 and a margin of error of 10%.]
 
 ## 3.2 Tract-Level Demographics
 
@@ -223,9 +230,9 @@ selected_counties
 - Variables: white alone (B03002_003), Black/African American (B03002_004), Hispanic/Latino (B03002_012), total population (B03002_001)
 - Use the same state and year as before
 - Output format: wide
-- **Challenge:** You'll need county codes, not names. Look at the GEOID patterns in your county data for hints.
+- **Challenge:** You'll need county codes, not names. Look at the GEOID patterns in your county data for hints."
 
-```{r tract-demographics}
+{r tract-demographics}
 # Define your race/ethnicity variables with descriptive names
 
 # Use get_acs() to retrieve tract-level data
@@ -352,16 +359,16 @@ moe_summary <- demographic_moe %>%
 
 ## 4.2 Pattern Analysis
 
-**Your Task:** Investigate whether data quality problems are randomly distributed or concentrated in certain types of communities.
+"**Your Task:** Investigate whether data quality problems are randomly distributed or concentrated in certain types of communities."
 
 ```{r pattern-analysis}
+
 # Group tracts by whether they have high MOE issues
 # Calculate average characteristics for each group:
 # - population size, demographic percentages
 
 # Use group_by() and summarize() to create this comparison
 # Create a professional table showing the patterns
-```
 
 pattern_analysis <- demographic_moe %>%
   group_by(high_moe_flag) %>%
@@ -382,14 +389,14 @@ pattern_analysis %>%
     caption = "Comparison of Tracts by Data Quality (High MOE vs. Reliable)"
   )
 
-**Pattern Analysis:** [Describe any patterns you observe. Do certain types of communities have less reliable data? What might explain this? All the census tracts I looked at had MOE issues. The Black and Latino population data did have higher MOEs in general, perhaps because they had a smaller sample size. - Would appreciate feedback on this!]
+"**Pattern Analysis:** [Describe any patterns you observe. Do certain types of communities have less reliable data? What might explain this? All the census tracts I looked at had MOE issues. The Black and Latino population data did have higher MOEs in general, perhaps because they had a smaller sample size. - Would appreciate feedback on this!]"
 
 
 # Part 5: Policy Recommendations
 
 ## 5.1 Analysis Integration and Professional Summary
 
-**Your Task:** Write an executive summary that integrates findings from all four analyses.
+"**Your Task:** Write an executive summary that integrates findings from all four analyses.
 
 **Executive Summary Requirements:**
 1. **Overall Pattern Identification**: What are the systematic patterns across all your analyses?
@@ -420,7 +427,7 @@ To address these challenges, the Department should adopt a multi-layered strateg
 # - Moderate Confidence: "Use with caution - monitor outcomes"  
 # - Low Confidence: "Requires manual review or additional data"
 
-# Format as a professional table with kable()
+# Format as a professional table with kable()"
 ```
 
 county_summary <- pa_data_alt %>%
@@ -446,7 +453,7 @@ county_summary %>%
     caption = "County Reliability and Algorithmic Recommendations"
   )
 
-**Key Recommendations**
+"**Key Recommendations**
 
 **Your Task** Use your analysis results to provide specific guidance to the department.
 
@@ -477,11 +484,11 @@ How can data be assessed if all tracts have high margins of error? How can we ju
 [Describe any decisions you made about data processing, county selection, or analytical choices that might affect reproducibility]
 
 **Limitations:**
-[Note any limitations in your analysis - sample size issues, geographic scope, temporal factors, etc.]
+[Note any limitations in your analysis - sample size issues, geographic scope, temporal factors, etc.]"
 
 ---
 
-## Submission Checklist
+"## Submission Checklist
 
 Before submitting your portfolio link on Canvas:
 
@@ -493,4 +500,4 @@ Before submitting your portfolio link on Canvas:
 - [ ] Census API key is properly set 
 - [ ] Document renders correctly to HTML
 
-**Remember:** Submit your portfolio URL on Canvas, not the file itself. Your assignment should be accessible at `your-portfolio-url/assignments/assignment_1/your_file_name.html`
+**Remember:** Submit your portfolio URL on Canvas, not the file itself. Your assignment should be accessible at `your-portfolio-url/assignments/assignment_1/your_file_name.html`"
