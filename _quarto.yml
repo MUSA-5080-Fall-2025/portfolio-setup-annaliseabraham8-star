@@ -16,12 +16,9 @@ website:
       menu:
         - href: labs/lab1/assignment1_template.qmd
           text: Assignment 1 Census Data Quality for Policy Decisions
-    - text: Midterm
-      menu:
-        - href: midterm/Abraham_Knox_Levin_Presentation.qmd
-          text: Presentation Slides
-        - href: midterm/Abraham_Knox_Levin_Appendix.qmd
-          text: Technical Appendix
+        - href: labs/lab4/lab4code_final.qmd
+          text: Assignment 4 Spatial Predictive Analysis
+   
 
 format:
   html:
