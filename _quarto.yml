@@ -6,22 +6,22 @@ website:
   title: "Annalise Abraham - MUSA 5080 Portfolio"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - text: Weekly Notes 
-        menu:
-          - href: weekly-notes/week-01-notes.qmd
-            text: Week 1
-      - text: Labs
-        menu:
-          - href: labs/lab1/assignment1_template.qmd
-            text: Assignment 1 Census Data Quality for Policy Decisions
-      - text: Midterm
-        menu:
-          - href: Abraham_Knox_Levin_Presentation.qmd
-            text: Presentation Slides
-          - href: Abraham_Knox_Levin_Appendix.qmd
-            text: Technical Appendix
+    - href: index.qmd
+      text: Home
+    - text: Weekly Notes 
+      menu:
+        - href: weekly-notes/week-01-notes.qmd
+          text: Week 1
+    - text: Labs
+      menu:
+        - href: labs/lab1/assignment1_template.qmd
+          text: Assignment 1 Census Data Quality for Policy Decisions
+    - text: Midterm
+      menu:
+        - href: midterm/Abraham_Knox_Levin_Presentation.qmd
+          text: Presentation Slides
+        - href: midterm/Abraham_Knox_Levin_Appendix.qmd
+          text: Technical Appendix
 
 format:
   html:
