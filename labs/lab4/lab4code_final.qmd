@@ -18,6 +18,24 @@ execute:
   message: false
 ---
 
+# Table of Contents
+
+## *Introduction*
+
+## *Part 1: Data Loading and Exploration*
+
+## *Part 2: Fishnet Grid Creation*
+
+## *Part 3: Spatial Features*
+
+## *Part 4: Count Regression Models*
+
+## *Part 5: Spatial Cross Validation*
+
+## *Part 6: Model Evaluation*
+
+# Introduction
+
 ## Assignment Overview
 
 In this lab, you will apply the spatial predictive modeling techniques demonstrated in the class exercise using a different 311 service request type of your choice as the predictor variable. You will build a complete spatial predictive model, document your process, and interpret your results.

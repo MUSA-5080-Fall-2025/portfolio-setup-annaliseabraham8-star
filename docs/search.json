@@ -266,18 +266,11 @@
     "text": "Before submitting, make sure you’ve: - [ ] Customized _quarto.yml with your name - [ ] Updated index.qmd with your information - [ ] Completed Week 1 notes - [ ] Enabled GitHub Pages - [ ] Verified your website loads correctly - [ ] Submitted your URL to Canvas\n\nNeed help? Don’t struggle alone - reach out during office hours (mine + TAs) or in class!"
   },
   {
-    "objectID": "labs/lab4/lab4code_final.html",
-    "href": "labs/lab4/lab4code_final.html",
-    "title": "Lab Assignment 4: Spatial Predictive Analysis",
-    "section": "",
-    "text": "In this lab, you will apply the spatial predictive modeling techniques demonstrated in the class exercise using a different 311 service request type of your choice as the predictor variable. You will build a complete spatial predictive model, document your process, and interpret your results.\n\n\nDue Date: November 17, 2025, 10:00AM\nDeliverable: One rendered document, posted to your portfolio website.\n\n\n\nBy completing this assignment, you will demonstrate your ability to:\n\nAdapt example code to analyze a new dataset\nBuild spatial features for predictive modeling\nApply count regression techniques to spatial data\nImplement spatial cross-validation\nInterpret and communicate model results\nCritically evaluate model performance"
-  },
-  {
     "objectID": "labs/lab4/lab4code_final.html#assignment-overview",
     "href": "labs/lab4/lab4code_final.html#assignment-overview",
     "title": "Lab Assignment 4: Spatial Predictive Analysis",
-    "section": "",
-    "text": "In this lab, you will apply the spatial predictive modeling techniques demonstrated in the class exercise using a different 311 service request type of your choice as the predictor variable. You will build a complete spatial predictive model, document your process, and interpret your results.\n\n\nDue Date: November 17, 2025, 10:00AM\nDeliverable: One rendered document, posted to your portfolio website.\n\n\n\nBy completing this assignment, you will demonstrate your ability to:\n\nAdapt example code to analyze a new dataset\nBuild spatial features for predictive modeling\nApply count regression techniques to spatial data\nImplement spatial cross-validation\nInterpret and communicate model results\nCritically evaluate model performance"
+    "section": "Assignment Overview",
+    "text": "Assignment Overview\nIn this lab, you will apply the spatial predictive modeling techniques demonstrated in the class exercise using a different 311 service request type of your choice as the predictor variable. You will build a complete spatial predictive model, document your process, and interpret your results.\n\nTimeline & Deliverables\nDue Date: November 17, 2025, 10:00AM\nDeliverable: One rendered document, posted to your portfolio website.\n\n\nLearning Goals\nBy completing this assignment, you will demonstrate your ability to:\n\nAdapt example code to analyze a new dataset\nBuild spatial features for predictive modeling\nApply count regression techniques to spatial data\nImplement spatial cross-validation\nInterpret and communicate model results\nCritically evaluate model performance"
   },
   {
     "objectID": "labs/lab4/lab4code_final.html#setup",
