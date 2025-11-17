@@ -270,7 +270,7 @@
     "href": "labs/lab4/lab4code_final.html#assignment-overview",
     "title": "Lab Assignment 4: Spatial Predictive Analysis",
     "section": "Assignment Overview",
-    "text": "Assignment Overview\nIn this lab, you will apply the spatial predictive modeling techniques demonstrated in the class exercise using a different 311 service request type of your choice as the predictor variable. You will build a complete spatial predictive model, document your process, and interpret your results.\n\nTimeline & Deliverables\nDue Date: November 17, 2025, 10:00AM\nDeliverable: One rendered document, posted to your portfolio website.\n\n\nLearning Goals\nBy completing this assignment, you will demonstrate your ability to:\n\nAdapt example code to analyze a new dataset\nBuild spatial features for predictive modeling\nApply count regression techniques to spatial data\nImplement spatial cross-validation\nInterpret and communicate model results\nCritically evaluate model performance"
+    "text": "Assignment Overview\nIn this lab I will use spatial modeling techniques and 311 service requests -for alleys with one or more lights out- to predict the locations of burglaries in the city of Chicago."
   },
   {
     "objectID": "labs/lab4/lab4code_final.html#setup",
@@ -278,20 +278,6 @@
     "title": "Lab Assignment 4: Spatial Predictive Analysis",
     "section": "Setup",
     "text": "Setup\n\n\nCode\n# Load required packages\nlibrary(tidyverse)      # Data manipulation\nlibrary(sf)             # Spatial operations\nlibrary(here)           # Relative file paths\nlibrary(viridis)        # Color scales\nlibrary(terra)          # Raster operations (replaces 'raster')\nlibrary(spdep)          # Spatial dependence\nlibrary(FNN)            # Fast nearest neighbors\nlibrary(MASS)           # Negative binomial regression\nlibrary(patchwork)      # Plot composition (replaces grid/gridExtra)\nlibrary(knitr)          # Tables\nlibrary(kableExtra)     # Table formatting\nlibrary(classInt)       # Classification intervals\nlibrary(here)\n\n# Spatstat split into sub-packages\nlibrary(spatstat.geom)    # Spatial geometries\nlibrary(spatstat.explore) # Spatial exploration/KDE\n\n# Set options\noptions(scipen = 999)  # No scientific notation\nset.seed(5080)         # Reproducibility\n\n# Create consistent theme for visualizations\ntheme_crime &lt;- function(base_size = 11) {\n  theme_minimal(base_size = base_size) +\n    theme(\n      plot.title = element_text(face = \"bold\", size = base_size + 1),\n      plot.subtitle = element_text(color = \"gray30\", size = base_size - 1),\n      legend.position = \"right\",\n      panel.grid.minor = element_blank(),\n      axis.text = element_blank(),\n      axis.title = element_blank()\n    )\n}\n\n# Set as default\ntheme_set(theme_crime())\n\ncat(\"✓ All packages loaded successfully!\\n\")\n\n\n✓ All packages loaded successfully!\n\n\nCode\ncat(\"✓ Working directory:\", getwd(), \"\\n\")\n\n\n✓ Working directory: C:/Users/annal/OneDrive/Documents/GitHub/portfolio-setup-annaliseabraham8-star/labs/lab4"
-  },
-  {
-    "objectID": "labs/lab4/lab4code_final.html#step-1-choose-your-311-violation-type",
-    "href": "labs/lab4/lab4code_final.html#step-1-choose-your-311-violation-type",
-    "title": "Lab Assignment 4: Spatial Predictive Analysis",
-    "section": "Step 1: Choose Your 311 Violation Type",
-    "text": "Step 1: Choose Your 311 Violation Type\n\nGetting the Data\nVisit the Chicago 311 Service Requests dataset:\nhttps://data.cityofchicago.org/stories/s/311-Dataset-Changes-12-11-2018/d7nq-5g7t\nBrowse the available service request types (e.g., Graffiti Removal, Pothole Repair, Street Light Out, Sanitation Code Violations, etc.) and choose one violation type that interests you.\n\n\nRequirements for Your Choice\n\nChoose a different violation type than the abandoned cars we did in class."
-  },
-  {
-    "objectID": "labs/lab4/lab4code_final.html#step-2-complete-the-analysis",
-    "href": "labs/lab4/lab4code_final.html#step-2-complete-the-analysis",
-    "title": "Lab Assignment 4: Spatial Predictive Analysis",
-    "section": "Step 2: Complete the Analysis",
-    "text": "Step 2: Complete the Analysis\nUsing the class exercise as your template, adapt the code to analyze your chosen 311 violation type.\n\nWhat to Include\nWork through all major sections of the analysis:"
   },
   {
     "objectID": "labs/lab4/lab4code_final.html#load-chicago-spatial-data",
@@ -305,7 +291,7 @@
     "href": "labs/lab4/lab4code_final.html#load-alley-lights-out-calls",
     "title": "Lab Assignment 4: Spatial Predictive Analysis",
     "section": "1.2: Load Alley Lights Out Calls",
-    "text": "1.2: Load Alley Lights Out Calls\nThis dataset contains all open 311 reports of one or more lights out on a wooden pole in the alley and all completed requests between 2011 and 2017. I chose this violation type because areas with dark alleys could be a sign that the area has been neglected and could therefore be a likely spot for crime.\n\n\nCode\nalley_lightsout &lt;- read_csv(here(\"labs/lab4/data/alley_lightsout.csv\"))%&gt;%\n  filter(!is.na(Latitude), !is.na(Longitude)) %&gt;%\n  st_as_sf(coords = c(\"Longitude\", \"Latitude\"), crs = 4326) %&gt;%\n  st_transform('ESRI:102271')\n\ncat(\"✓ Loaded alley lights out calls\\n\")\n\n\n✓ Loaded alley lights out calls\n\n\nCode\ncat(\"  - Number of calls:\", nrow(alley_lightsout), \"\\n\")\n\n\n  - Number of calls: 218912"
+    "text": "1.2: Load Alley Lights Out Calls\n\nThis dataset contains all open 311 reports of one or more lights out on a wooden pole in the alley and all completed requests between 2011 and 2017. I chose this violation type because areas with dark alleys could be a sign that the area has been neglected and could therefore be a likely spot for crime.\n\n\nCode\nalley_lightsout &lt;- read_csv(here(\"labs/lab4/data/alley_lightsout.csv\"))%&gt;%\n  filter(!is.na(Latitude), !is.na(Longitude)) %&gt;%\n  st_as_sf(coords = c(\"Longitude\", \"Latitude\"), crs = 4326) %&gt;%\n  st_transform('ESRI:102271')\n\ncat(\"✓ Loaded alley lights out calls\\n\")\n\n\n✓ Loaded alley lights out calls\n\n\nCode\ncat(\"  - Number of calls:\", nrow(alley_lightsout), \"\\n\")\n\n\n  - Number of calls: 218912"
   },
   {
     "objectID": "labs/lab4/lab4code_final.html#visualize-point-data",
